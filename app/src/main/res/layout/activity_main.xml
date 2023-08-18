@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <ImageView
+            android:id="@+id/random_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp"
+    />
+
+    <TextView
+            android:id="@+id/resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Texto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/random_img" app:layout_constraintVertical_bias="0.375"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultado"
+    >
+        <ImageButton
+                app:srcCompat="@drawable/papel"
+
+                android:id="@+id/btn_papel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+        />
+        <ImageButton
+                app:srcCompat="@drawable/pedra"
+
+                android:id="@+id/btn_pedra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+        />
+        <ImageButton
+                app:srcCompat="@drawable/tesoura"
+
+                android:id="@+id/btn_tesoura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+        />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+            android:text="Histórico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_historico"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="36dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
